@@ -14,8 +14,8 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm">
             <div id="logo">
+                <img src="logo.png">
                 <span>SGCM</span>
             </div>
             <div id="usuarioInfo">
@@ -25,7 +25,6 @@
                     <span>Logout</span>
                 </button>
             </div>
-        </nav>
     </header>
     <nav>
         <ul>
@@ -40,8 +39,14 @@
         </ul>
     </nav>
     <main>
-        <div>ERRO!</div>
-        <div>SUCESSO!</div>
+        <div class="alerta erro">
+        <span>&times;</span>
+            ERRO!
+        </div>
+        <div class="alerta sucesso">
+            <span>&times;</span>
+            SUCESSO!
+        </div>
         <form action="#" method="get">
             <input type="hidden" name="id">
             <div class="form-group">
@@ -76,9 +81,13 @@
             </div>
             <br>
             <div id="comandos">
-                <button type="button">Adicionar</button>
-                <label for="">Buscar</label>
-                <input type="text" id="busca" placeholder="Digite para Pesquisar">
+                <div>
+                    <button type="button" class="btn btn-primary">Adicionar</button>
+                </div>
+                <div>
+                    <label for="">Buscar</label>
+                    <input type="text" id="busca" placeholder="Digite para Pesquisar">
+                </div>
             </div>
 
         </form>

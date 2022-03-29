@@ -8,14 +8,133 @@ body {
 /* header */
 header{
     background-image: linear-gradient(#03045E, #023E8A,#0077B6);
+    display: flex;
+    justify-content: space-between;
 }
 
+
 /* main */
+
+
 main {
-    background-image: linear-gradient(rgba(161, 35, 35, 0.267),#4545);
+    background-image: linear-gradient(rgba(224, 55, 196, 0.267),#4545);
+    padding: 1em;   
+}
+
+/* Alertas */
+
+div.alerta {
+    border: 1px solid;
+    padding: 1em;
+    max-width: 400px;
+    margin: 1em auto;
+    word-wrap: break-word;
+    /* position: absolute;
+    top: 0.5em;
+    right: 0;
+    left: 60em;
+    opacity: 0.7; */
+    box-shadow: 0px 2px 2px 0px black;
+    border-radius: 10px;
+}
+
+div.alerta span {
+    float: right;
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+div.alerta.erro {
+    background-color: #FF9F9f;
+    color: #7a0303;
+    border-color: #af0000
+}
+
+div.alerta.sucesso {
+    background-color: #AFFFBA;
+    color: #006f05;
+    border-color: #006f05;
 }
 
 footer {
     background-image: linear-gradient(#023E8A,#0077B6);
     margin-top: auto;
+}
+
+div#logo {
+    margin: auto 0;
+}
+
+div#logo * {
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 0.5em;
+}
+
+div#usuarioInfo *, footer span {
+   display: block; 
+   margin-bottom: 0.5em;
+}
+
+header, footer {
+    color: white;
+    padding: 0.5;
+}
+
+
+/* TABELA */
+
+table {
+    border-spacing: 0.1em;
+    margin: 0.5em auto;
+    width: 100%;
+}
+
+table th {
+    background-color: #003366;
+    color: white;
+}
+
+table th, table td {
+    padding: 0.5em;
+}
+
+table tfoot td {
+    text-align: center;
+    border-top: 1px solid #003366;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #c6d4e2;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #e7ecf1;
+}
+
+table tbody tr:hover {
+    background-color: #cccccc;
+}
+
+/* Comandos */
+
+div#comandos {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 0.1em;
+    border-bottom: 1px solid #003366;
+}
+
+table tbody td:last-child {
+    text-align: center;
+    white-space: nowrap;
+    width: 1%;
+}
+
+table thead tr {
+    text-align: center;
+}
+
+tbody {
+    text-align: center;
 }
