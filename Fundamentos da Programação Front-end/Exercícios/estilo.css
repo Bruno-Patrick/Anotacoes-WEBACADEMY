@@ -10,8 +10,22 @@ header{
     background-image: linear-gradient(#03045E, #023E8A,#0077B6);
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
+@media screen  and (max-width: 430x) {
+    div#usuarioInfo {
+        margin-top: 1em;
+    }
+
+    div#usuarioInfo span{
+        text-align: left;
+    }
+
+    div#usuarioInfo button{
+        margin-left: 0;
+    }
+}
 
 /* main */
 
@@ -21,6 +35,150 @@ main {
     padding: 1em;   
 }
 
+/* NAV */
+
+nav {
+    background-color: #383838;
+    border: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    padding: 1em;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #cccccc;
+    color: #383838;
+}
+
+nav li#dropdown:hover div#dropdown_conteudo{
+    display: block;
+}
+
+nav div#dropdown_conteudo {
+    display: none;
+    position: absolute;
+    background-color: #383838;
+    border: 1px solid white;
+    box-shadow: 0px 2px 4px 0px black;
+}
+
+nav div#dropdown_conteudo a {
+    display: block;
+}
+
+@media screen and (max-width: 730px) {
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul li a {
+        width: 100%;
+    }
+
+    nav div#dropdown_conteudo {
+        position: relative;
+        border: none;
+        box-shadow: none;
+    }
+}
+
+/* Formulários */
+
+form {
+    margin: auto;
+    text-align: right;
+    width: fit-content;
+}
+
+form div.grid {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 0.5em;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+label::after {
+    content: ":";
+}
+
+input:required:invalid,
+select:required:invalid {
+    border: 1px solid red;
+}
+
+input, select {
+    height: 2em;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 400px) {
+    form {
+        word-wrap: 85%;
+        text-align: left;
+    }
+
+    form div.grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Botões */
+
+button,
+input[type="button"]
+input[type="submit"]{
+    background-color: #2c832d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    height: 2em;
+    cursor: pointer;
+}
+
+button.excluir:hover:not(:disabled){
+    background-color: #811b1b;
+}
+
+input[type="button"]
+input[type="submit"]
+{
+    background-color: #1e5e20;
+}
+
+input[type="button"]:hover
+input[type="submit"]:hover
+{
+    background-color: #1e5e20;
+}
+
+button.excluir {
+    background-color: #c42646;
+}
+
+button:disabled,
+input[type="button"]:disabled
+input[type="submit"]:disabled
+{
+    background-color: #757575;
+    color: #cccccc;
+    cursor: not-allowed;
+}
 /* Alertas */
 
 div.alerta {
@@ -61,8 +219,17 @@ footer {
     margin-top: auto;
 }
 
+footer a {
+    color: white;
+}
+
 div#logo {
     margin: auto 0;
+}
+
+div#logo span {
+    font-size: 2em;
+    font-weight: bold;
 }
 
 div#logo * {
@@ -76,6 +243,14 @@ div#usuarioInfo *, footer span {
    margin-bottom: 0.5em;
 }
 
+div#usuarioInfo button {
+    margin-left: auto;
+}
+
+div#usuarioInfo span {
+    text-align: right;
+}
+
 header, footer {
     color: white;
     padding: 0.5;
@@ -87,7 +262,9 @@ header, footer {
 table {
     border-spacing: 0.1em;
     margin: 0.5em auto;
-    width: 100%;
+    /* width: 100%; */
+    overflow-x: auto;
+    display: block;
 }
 
 table th {
@@ -120,9 +297,11 @@ table tbody tr:hover {
 
 div#comandos {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0.5em 0.1em;
     border-bottom: 1px solid #003366;
+    align-items: center;
 }
 
 table tbody td:last-child {
