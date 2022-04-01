@@ -15,6 +15,8 @@ window.onload = () => {
         });
     });
 
+    
+
     let botaoCarregar = document.querySelector("button#load");
     let tabela =document.querySelector("table");
     let xhr = new XMLHttpRequest();
