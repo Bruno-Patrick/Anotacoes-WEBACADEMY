@@ -1,0 +1,19 @@
+body {
+    background-color: #f7f7f7ef;
+}
+
+input.large {
+    width: 612px;
+}
+
+div.minput {
+    margin-top: 1em;;
+}
+
+ul#list {
+    list-style-type: none;
+}
+
+ul li {
+    margin: 0.5em;
+}
