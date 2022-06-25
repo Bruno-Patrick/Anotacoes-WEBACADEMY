@@ -6,10 +6,13 @@ function addElement({ name, url }) {
     //...
     const ul = document.getElementById('list') //Captura o <ul></ul>
     const li = document.createElement('li') //Cria um elemento <li></li>
-    const trash = document.createElement('i') //Cria um elemento <i></i>
-    trash.classList.add('fa-solid') // Adiciona as classes do Font Awesome
-    trash.classList.add('fa-trash') // Adiciona as classes do Font Awesome
-    li.textContent = `NAME: ${name}, URL: ${url}` // Adiciona o texto desejado dentro da <li>
+    const trash = document.createElement('button') //Cria um elemento <i></i>
+    trash.classList.add('btn') // Adiciona as classes do Bootstrap
+    trash.classList.add('btn-sm') // Adiciona as classes do Bootstrap
+    trash.classList.add('btn-warning') // Adiciona as classes do Bootstrap
+    trash.classList.add('font-weight-bold') // Adiciona as classes do Bootstrap
+    trash.textContent = 'Apagar'
+    li.textContent = `NAME: ${name}, URL: ${url}  ` // Adiciona o texto desejado dentro da <li>
     li.appendChild(trash) //Insere o icone de lixo dentro da <li>
     ul.appendChild(li) //Insere li dentro da lista <ul>
 
