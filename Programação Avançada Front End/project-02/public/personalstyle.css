@@ -17,3 +17,13 @@ ul#list {
 ul li {
     margin: 0.5em;
 }
+
+div.block-top {
+    background-color: #FFFCF9;
+}
+
+div.red-line {
+    background-color: red;
+    width: 100%;
+    height: 0.5em;
+}

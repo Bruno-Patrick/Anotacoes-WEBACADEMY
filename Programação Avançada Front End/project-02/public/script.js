@@ -12,7 +12,7 @@ function addElement({ name, url }) {
     trash.classList.add('btn-warning') // Adiciona as classes do Bootstrap
     trash.classList.add('font-weight-bold') // Adiciona as classes do Bootstrap
     trash.textContent = 'Apagar'
-    li.textContent = `NAME: ${name}, URL: ${url}  ` // Adiciona o texto desejado dentro da <li>
+    li.textContent = `NAME: ${name} | URL: ${url}  ` // Adiciona o texto desejado dentro da <li>
     li.appendChild(trash) //Insere o icone de lixo dentro da <li>
     ul.appendChild(li) //Insere li dentro da lista <ul>
 
