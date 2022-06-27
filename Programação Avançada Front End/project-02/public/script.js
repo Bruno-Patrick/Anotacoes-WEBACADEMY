@@ -13,6 +13,11 @@ function addElement({ name, url }) {
     const thURL = document.createElement('th')
     const thAction = document.createElement('th')
     const trash = document.createElement('button') //Cria um elemento <i></i>
+    const a = document.createElement('a')
+
+    a.setAttribute('href',`${url}`)
+    a.setAttribute("target","_blank")
+    a.textContent = `${url}`
 
     trash.classList.add('btn') // Adiciona as classes do Bootstrap
     trash.classList.add('btn-sm') // Adiciona as classes do Bootstrap
@@ -27,7 +32,7 @@ function addElement({ name, url }) {
     thName.textContent = `${name}`
 
     thURL.ATTRIBUTE_NODE = 'scope=row'
-    thURL.textContent = `${url}`
+    thURL.appendChild(a)
 
     thAction.appendChild(trash)
     tr.appendChild(thLength)
