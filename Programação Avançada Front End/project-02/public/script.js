@@ -1,29 +1,49 @@
 const ul = document.querySelector('ul')
 const input = document.querySelector('input')
 const form = document.querySelector('form')
+let tableLength = 0
 
 function addElement({ name, url }) {
     //...
-    const ul = document.getElementById('list') //Captura o <ul></ul>
-    const li = document.createElement('li') //Cria um elemento <li></li>
+    tableLength += 1
+    const tbody = document.getElementById('content-table') //Captura o <ul></ul>
+    const tr = document.createElement('tr') //Cria um elemento <li></li>
+    const thLength = document.createElement('th') //Cria um elemento
+    const thName = document.createElement('th')
+    const thURL = document.createElement('th')
+    const thAction = document.createElement('th')
     const trash = document.createElement('button') //Cria um elemento <i></i>
+
     trash.classList.add('btn') // Adiciona as classes do Bootstrap
     trash.classList.add('btn-sm') // Adiciona as classes do Bootstrap
     trash.classList.add('btn-warning') // Adiciona as classes do Bootstrap
     trash.classList.add('font-weight-bold') // Adiciona as classes do Bootstrap
     trash.textContent = 'Apagar'
-    li.textContent = `NAME: ${name} | URL: ${url}  ` // Adiciona o texto desejado dentro da <li>
-    li.appendChild(trash) //Insere o icone de lixo dentro da <li>
-    ul.appendChild(li) //Insere li dentro da lista <ul>
+
+    thLength.ATTRIBUTE_NODE = 'scope=row'
+    thLength.textContent = `${tableLength}`
+
+    thName.ATTRIBUTE_NODE = 'scope=row'
+    thName.textContent = `${name}`
+
+    thURL.ATTRIBUTE_NODE = 'scope=row'
+    thURL.textContent = `${url}`
+
+    thAction.appendChild(trash)
+    tr.appendChild(thLength)
+    tr.appendChild(thName)
+    tr.appendChild(thURL)
+    tr.appendChild(thAction)
+    tbody.appendChild(tr)
 
     removeElement(trash) // Callback para função
-
 }
 
 function removeElement(element) {
     //...
     element.addEventListener('click', () => { //Adiciona um event listener no ícone
-        element.parentNode.remove() //remove o elemento anterior, no caso toda a estrutura da <li>
+        element.parentNode.parentNode.remove() //remove o elemento anterior, no caso toda a estrutura da <li>
+        tableLength -= 1
     })
 }
 
