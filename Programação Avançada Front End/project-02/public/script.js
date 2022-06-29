@@ -1,12 +1,15 @@
 const ul = document.querySelector('ul')
 const input = document.querySelector('input')
 const form = document.querySelector('form')
+// const fs = require('fs')
+// const emmiter = require('events')
+
 let tableLength = 0
 
 function addElement({ name, url }) {
     //...
     tableLength += 1
-    const tbody = document.getElementById('content-table') //Captura o <ul></ul>
+    const tbody = document.getElementById('content-table') //Captura o 
     const tr = document.createElement('tr') //Cria um elemento <li></li>
     const thLength = document.createElement('th') //Cria um elemento
     const thName = document.createElement('th')
@@ -26,6 +29,7 @@ function addElement({ name, url }) {
     trash.textContent = 'Apagar'
 
     thLength.ATTRIBUTE_NODE = 'scope=row'
+    thLength.setAttribute('id','length')
     thLength.textContent = `${tableLength}`
 
     thName.ATTRIBUTE_NODE = 'scope=row'
@@ -47,10 +51,20 @@ function addElement({ name, url }) {
 function removeElement(element) {
     //...
     element.addEventListener('click', () => { //Adiciona um event listener no ícone
-        element.parentNode.parentNode.remove() //remove o elemento anterior, no caso toda a estrutura da <li>
+        if (confirm('Tem certeza que quer deletar?')){
+            element.parentNode.parentNode.remove() //remove o elemento anterior, no caso toda a estrutura da <li>
+        }
         tableLength -= 1
     })
 }
+
+// function writeJson(name, url){
+//     const data = JSON.stringify({
+//         "name":`${name}`,
+//         "url":`${url}`
+//     })
+    
+// }
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
