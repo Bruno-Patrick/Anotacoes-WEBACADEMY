@@ -1,8 +1,6 @@
 const ul = document.querySelector('ul')
 const input = document.querySelector('input')
 const form = document.querySelector('form')
-// const fs = require('fs')
-// const emmiter = require('events')
 
 let tableLength = 0
 
@@ -45,26 +43,24 @@ function addElement({ name, url }) {
     tr.appendChild(thAction)
     tbody.appendChild(tr)
 
-    removeElement(trash) // Callback para função
+    removeElement(trash, { name, url }) // Callback para função
+    dataActualizer({ name, url })
 }
 
-function removeElement(element) {
+function removeElement(element, { name, url }) {
     //...
     element.addEventListener('click', () => { //Adiciona um event listener no ícone
         if (confirm('Tem certeza que quer deletar?')){
             element.parentNode.parentNode.remove() //remove o elemento anterior, no caso toda a estrutura da <li>
         }
-        tableLength -= 1
     })
+    tableLength -= 1
+    dataRemover({ name, url })
 }
 
-// function writeJson(name, url){
-//     const data = JSON.stringify({
-//         "name":`${name}`,
-//         "url":`${url}`
-//     })
-    
-// }
+function fun(){
+    alert('OI')
+}
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();

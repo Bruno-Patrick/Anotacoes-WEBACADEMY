@@ -1,16 +1,42 @@
 const http = require('http')
-const data = require('./urls.json')
 const URL = require('url')
+const data = require('./urls.json')
+const fs = require('fs')
+const path = require('path')
 
 http.createServer((req, res) => {
-
+    
     const { name, url, del } = URL.parse(req.url, true).query
+    
+    
 
-    if(!name || !url) return res.end('show')
+    data.urls = data.urls.filter(item => item.url != url)
 
-    if(del) return res.end('delete')
+    function writeFile(cb){
+        
+        fs.writeFile(
+            path.join(__dirname, 'urls.json'),
+            JSON.stringify(data, null, 2),
+            err => {
+                if (err) throw err;
+                cb('Operação realizada com sucesso!')
+            }
+        )
+    }
 
-    return res.end('create')
+    if(!name || !url) return res.end('show') //push(name, url)
+    
+    if(del) return writeFile(message => res.end(message))
+
+    json = {
+        name:name,
+        url:url
+    }
+
+    data.urls.push(json)
+
+
+    return writeFile(message => res.end(message))
 }).listen(3000, () => {
     console.log('API is running')
 })
