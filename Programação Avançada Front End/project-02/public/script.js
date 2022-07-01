@@ -2,33 +2,32 @@ const ul = document.querySelector('ul')
 const input = document.querySelector('input')
 const form = document.querySelector('form')
 
-let tableLength = 0
+async function load(){
+    const res = await fetch('http://localhost:3000/')
+        .then(data => data.json())
+    res.urls.map( ( { name, url} ) => addElement( {name, url } ) )
+}; load();
 
 function addElement({ name, url }) {
     //...
-    tableLength += 1
+    fetch(`http://localhost:3000/?name=${name}&url=${url}`)
     const tbody = document.getElementById('content-table') //Captura o 
     const tr = document.createElement('tr') //Cria um elemento <li></li>
-    const thLength = document.createElement('th') //Cria um elemento
     const thName = document.createElement('th')
     const thURL = document.createElement('th')
     const thAction = document.createElement('th')
-    const trash = document.createElement('button') //Cria um elemento <i></i>
+    const deleteButton = document.createElement('button') //Cria um elemento <i></i>
     const a = document.createElement('a')
 
     a.setAttribute('href',`${url}`)
     a.setAttribute("target","_blank")
     a.textContent = `${url}`
 
-    trash.classList.add('btn') // Adiciona as classes do Bootstrap
-    trash.classList.add('btn-sm') // Adiciona as classes do Bootstrap
-    trash.classList.add('btn-warning') // Adiciona as classes do Bootstrap
-    trash.classList.add('font-weight-bold') // Adiciona as classes do Bootstrap
-    trash.textContent = 'Apagar'
-
-    thLength.ATTRIBUTE_NODE = 'scope=row'
-    thLength.setAttribute('id','length')
-    thLength.textContent = `${tableLength}`
+    deleteButton.classList.add('btn') 
+    deleteButton.classList.add('btn-sm') 
+    deleteButton.classList.add('btn-warning') 
+    deleteButton.classList.add('font-weight-bold') 
+    deleteButton.textContent = 'Apagar'
 
     thName.ATTRIBUTE_NODE = 'scope=row'
     thName.textContent = `${name}`
@@ -36,30 +35,23 @@ function addElement({ name, url }) {
     thURL.ATTRIBUTE_NODE = 'scope=row'
     thURL.appendChild(a)
 
-    thAction.appendChild(trash)
-    tr.appendChild(thLength)
+    thAction.appendChild(deleteButton)
     tr.appendChild(thName)
     tr.appendChild(thURL)
     tr.appendChild(thAction)
     tbody.appendChild(tr)
 
-    removeElement(trash, { name, url }) // Callback para função
-    dataActualizer({ name, url })
+    removeElement(deleteButton, {name, url}) // Callback para função
 }
 
-function removeElement(element, { name, url }) {
+function removeElement(element, {name, url}) {
     //...
     element.addEventListener('click', () => { //Adiciona um event listener no ícone
         if (confirm('Tem certeza que quer deletar?')){
+            fetch(`http://localhost:3000/?name=${name}&url=${url}&del=1`)
             element.parentNode.parentNode.remove() //remove o elemento anterior, no caso toda a estrutura da <li>
         }
     })
-    tableLength -= 1
-    dataRemover({ name, url })
-}
-
-function fun(){
-    alert('OI')
 }
 
 form.addEventListener('submit', (event) => {
