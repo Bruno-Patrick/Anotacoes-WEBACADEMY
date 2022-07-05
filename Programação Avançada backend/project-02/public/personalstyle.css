@@ -39,6 +39,27 @@ table.page-table tbody tr:hover {
     background-color: rgba(230, 228, 228, 0.707);
 }
 
+table.page-table tbody tr.delete {
+    background-color: rgba(252, 6, 6, 0.244) !important;
+}
+
 div.input-right {
     margin-left: 0.6em;
+}
+
+@media screen and (max-width: 650px) {
+    input.large {
+        width: 450px;
+    }
+
+    table.page-table {
+        width: auto;
+    }
+
+}
+
+@media screen and (max-width: 478px) {
+    input.large {
+        width: 250px !important;
+    }
 }

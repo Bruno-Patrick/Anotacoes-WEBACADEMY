@@ -52,6 +52,13 @@ function removeElement(element, {name, url}) {
             element.parentNode.parentNode.remove() //remove o elemento anterior, no caso toda a estrutura da <li>
         }
     })
+
+    element.addEventListener('mousemove', () => {
+        element.parentNode.parentNode.classList.add('delete')
+    })
+    element.addEventListener('mouseleave', () => {
+        element.parentNode.parentNode.classList.remove('delete')
+    })
 }
 
 form.addEventListener('submit', (event) => {
