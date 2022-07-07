@@ -35,6 +35,11 @@ table.page-table {
     width: 50%;
 }
 
+/* table thead tr.table-head {
+    background-color: #b5e48c;
+    transition: all;
+} */
+
 table.page-table tbody tr:hover {
     background-color: rgba(230, 228, 228, 0.707);
 }

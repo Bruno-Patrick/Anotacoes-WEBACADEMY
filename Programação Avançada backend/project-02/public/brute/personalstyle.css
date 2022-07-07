@@ -1,0 +1,109 @@
+
+img.logo {
+    width: 82px;
+    height: 52px;
+    left: 173px;
+    top: 1px;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+div.topbar-container {
+    position: absolute;
+    width: 428px;
+    height: 53px;
+    left: 0px;
+    top: 42px;
+    background: #1351B4;
+    display: flex;
+    justify-content: end;
+}
+
+.logo-background {
+    position: absolute;
+    width: 428px;
+    height: 42px;
+    left: 0px;
+    top: 0px;
+    background: #EDEDED;
+    display: flex;
+    justify-content: center;
+}
+
+input.topbar-input {
+    width: 344px;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+div.topbar-input-background {
+    margin-top: 0.5em;
+    margin-right: 0.3em;
+    width: 450px;
+    height: 37px;
+    background: rgba(245, 97, 13, 0.13);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+div.left-topbar-input {
+    display: flex;
+}
+
+div.inline-block {
+    position: absolute;
+    width: 429px;
+    height: 3px;
+    left: -1px;
+    top: 94px;
+    background: #1613B4;
+}
+
+div.cards-group {
+    position: relative;
+    width: 365px;
+    height: 97px;
+    left: 31px;
+    margin-top: 125px;
+}
+
+div.card {
+    margin-top: 35px;
+    background: rgba(19, 81, 180, 0.7);
+    box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.56);
+    border-radius: 8px;
+}
+
+
+div.card-head {
+    position: absolute;
+    height: 0%;
+}
+
+img.edit {
+    width: 27px;
+    height: 27px;
+    margin-bottom: 20px;
+}
+
+img.trash {
+    width: 27px;
+    height: 27px;
+}
+
+span.card-text {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+    margin-left: 0.5em;
+}
+
+div.text-center {
+    line-height: 97px;
+    text-align: left;
+}

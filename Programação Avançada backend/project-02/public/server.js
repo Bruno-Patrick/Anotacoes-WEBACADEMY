@@ -16,7 +16,7 @@ http.createServer((req, res) => {
 
     // Estratégia para verificar se existe algum documento sendo requisitado que o servidor não está servindo.
     const extname = path.extname(filePath)
-    const allowedFileTypes = ['.html', '.css', '.js']
+    const allowedFileTypes = ['.html', '.css', '.js','.svg']
     const allowed = allowedFileTypes.find(item => item == extname)
     // Se allowed for falso, a aplicação entra no if e faz um retorno simplesmente para evitar que o servidor para de rodar por não conseguir resolver todas as requisições de documentos de tipos diferentes dos que são aceitos.
     if (!allowed) return
