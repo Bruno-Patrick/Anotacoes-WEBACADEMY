@@ -18,42 +18,49 @@
     <header>
 
         <div id="logo-background">
-            <img src="" id="logo">
+            <img src="./icons/logo.svg" id="logo">
         </div>
         <div class="diviser-inline"></div>
 
         <div id="input-box">
+
             <div id="input-background" class="d-flex">
-                <img src="" alt=""> <!-- bars-->
+                
+                <img src="./icons/bars.svg" id="topbar-bars" alt=""> <!-- bars-->
 
-                <form action="/">
-                    <div id="form">
-                        <input id="input-form" type="text" placeholder="NAME,URL...">
+                <div id="burger-menu" class="d-none">
+                    <div id="close-menu">
+                        <span >X</span>
                     </div>
-                </form>
+                    <ul id="menu">
+                        <li>User Login</li>
+                        <li>Page Configurations</li>
+                    </ul>
+                </div>
 
-                <img src="" alt=""> <!-- save button-->
+                    <form action="/">
+                        <div id="form">
+                            <input id="input-form" type="text" placeholder="NAME,URL...">
+                        </div>
+                    </form>
+
+                <img src="./icons/save.svg" id="topbar-save"> <!-- save button-->
             </div>
+
         </div>
 
     </header>
 
     <main>
 
-        <div id="card-group">
-
-            <div class="card">
-
-                <div class="card-content">
-
-                </div>
-
-                <div class="card-actions">
-                    <img src="" alt="" srcset=""> <!-- trash button-->
-                </div>
-
+        <form action="/" id="search-form">
+            <div id="search-input">
+                <input type="text" placeholder="Filtrar por nome..." id="search-cards-input">
             </div>
+        </form>
 
+        <div id="card-group">
+            
         </div>
 
     </main>
@@ -61,25 +68,30 @@
     <footer>
 
         <div id="footer">
-            <div id="left-footer">
-                
-            </div>
+            <!-- <div id="left-footer">
+                <a>About Project</a>
+                <a>About US</a>
+            </div> -->
             
             <div id="right-footer">
                 <a>Social Medias</a>
                 <div id="social-medias-footer">
-                    <img src="" alt=""> <!--Twitter-->
-                    <img src="" alt=""> <!--Instagram-->
-                    <img src="" alt=""> <!--Facebook-->
+                    <img src="./icons/social medias/twitter.svg" alt=""> <!--Twitter-->
+                    <img src="./icons/social medias/instagram.svg" alt=""> <!--Instagram-->
+                    <img src="./icons/social medias/facebook.svg" alt=""> <!--Facebook-->
                 </div>
                 <a>Developed By:</a>
-                <img src="" alt=""> <!--Github-->
+                <div id="developed-by">
+                    <img src="./icons/social medias/github.svg" alt=""> <!--Github-->
+                </div>
             </div>
 
         </div>
 
     </footer>
 
+    <script src="./script.js"></script>
+    <script src="./animations.js"></script>
 </body>
 
 </html>
