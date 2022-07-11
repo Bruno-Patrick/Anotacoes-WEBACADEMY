@@ -4,7 +4,12 @@ body {
     font-family: 'Bebas Neue';
 }
 
-.centralize {
+main {
+    margin-top: auto;
+    min-height: 25vh;
+}
+
+.center {
     display: flex;
     justify-content: center;
 }
@@ -81,6 +86,23 @@ div#account img {
     margin-right: 0.5em;
 }
 
+div.nav2 {
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 0.5em;
+    line-height: 0px;
+}
+
+div.nav2 nav div p {
+    margin-left: 0.5em;
+}
+
+div.nav2 nav div p:hover {
+    font-weight: 600;
+    font-size: 18px;
+}
+
 input {
     border: none;
 }
@@ -153,11 +175,6 @@ input#search:focus {
     width: 300px;
 }
 
-main {
-    margin-top: auto;
-    min-height: 25vh;
-}
-
 div#cards-group {
     display: grid;
     justify-content: center;
@@ -206,5 +223,41 @@ div#card-action {
 div#card-action img {
     position: relative;
     top: -29px;
+}
+
+@media screen and (min-width: 800px) {
+    div#desktop {
+        display: flex;
+        justify-content:space-around;
+        min-width: 100vh;
+        min-height: 100vh;
+    }
+
+    main {
+        margin-bottom: auto;
+        margin-top: 0;
+    }
+
+    div#brownline {
+        width: 3px;
+        height: 80vh;
+    }
+
+    div#logo {
+        width: 100vh;
+    }
+
+    div#form {
+        margin-top: 3em;
+        width: 100vh;
+    }
+
+    div#desktop-bar {
+        width: 100vh;
+    }
+
+    /* footer {
+
+    } */
 
 }

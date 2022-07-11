@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Save ur links!</title>
+    
+    <link rel="shortcut icon" href="./icons/link.svg" type="image/x-icon">
 
     <link rel="stylesheet" href="styles.css">
 
@@ -19,94 +21,114 @@
 </head>
 <body>
     
-    <header>
+    <div id="desktop">
 
-        <div id="logo">
-            <img src="./icons/logo.svg" alt="" id="logosvg"> <!--Logo-->
-        </div>
-
-        <div class="centralize">
-            <div id="vineline"></div>
-        </div>
-
-        <div id="header">
-
-            <div id="nav" class="centralize container">
-
-                <nav class="centralize">
+        <header>
     
-                    <div id="bars">
-                        <img src="./icons/bars.svg" alt=""> <!--Bars.svg-->
+            <div id="desktop-bar">
+                
+                <div id="logo">
+                    <img src="./icons/logo.svg" alt="" id="logosvg"> <!--Logo-->
+                </div>
+        
+                <div class="center">
+                    <div id="vineline"></div>
+                </div>
+        
+        
+                    <div id="nav" class="center">
+        
+                        <nav class="center">
+            
+                            <div id="bars">
+                                <img src="./icons/bars.svg" alt=""> <!--Bars.svg-->
+                            </div>
+            
+                            <div id="text">
+                                <p>REPLACE YOUR WEB LINKS HERE!</p>
+                            </div>
+            
+                            <div id="account">
+                                <img src="./icons/arrow-right-to-bracket.svg" alt=""> <!--Sign In/Out-->
+                            </div>
+            
+                        </nav>
+        
+                    </div>
+
+                    <div id="nav" class="center nav2" style="display: none;">
+                        <nav class="center">
+            
+                            <div id="bars">
+                                <p>About</p>
+                                <p>Contact</p>
+                                <p>Feedback</p>
+                            </div>
+
+                            <div id="account" class="close">
+                                <img src="https://site-assets.fontawesome.com/releases/v6.1.1/svgs/light/circle-xmark.svg" alt=""> <!--Sign In/Out-->
+                            </div>
+            
+                        </nav>
                     </div>
     
-                    <div id="text">
-                        <p>REPLACE YOUR WEB LINKS HERE!</p>
-                    </div>
-    
-                    <div id="account">
-                        <img src="./icons/arrow-right-to-bracket.svg" alt=""> <!--Sign In/Out-->
-                    </div>
-    
-                </nav>
-
             </div>
-
+            
             <div id="form">
                 <form action="/" id="form-input">
-
+    
                     <input type="text" name="name" id="name" placeholder="Digite o nome do site..."
                          maxlength="23" required>
-
+    
                     <input type="text" name="url" id="url" 
                         placeholder="Digite a URL do site..." required>
-
+    
                     <div id="button-submit">
                         <button type="submit" id="form-submit">
                             <img src="./icons/arrow-submit.svg" alt=""> <!--Arrow-send-->
                         </button>
                     </div>
                 </form>
-
-
+    
             </div>
-
-        </div> <!--End navbar-->
-
-        <div class="centralize">
+            
+        </header>
+        
+        <div class="center">
             <div id="brownline"></div>
         </div>
-
-    </header>
-
-    <main>
-
-        <form action="/" id="search-form">
-            <div class="centralize">
-                <input type="text" name="" id="search" placeholder="Search by name...">
+        
+        <main>
+    
+            <form action="/" id="search-form">
+                <div class="center">
+                    <input type="text" name="" id="search" placeholder="Search by name...">
+                </div>
+            </form>
+    
+            <div id="cards-group">
+    
+                <!-- <div id="card">
+    
+                        <div id="card-text">
+                            <a href=""> </a>
+                        </div>
+    
+                        <div id="card-action">
+                            <img src="./icons/circle-trash.svg" alt=""> Delete Button
+                        </div>
+    
+                </div> -->
+    
             </div>
-        </form>
+    
+        </main>
 
-        <div id="cards-group">
-
-            <!-- <div id="card">
-
-                    <div id="card-text">
-                        <a href=""> </a>
-                    </div>
-
-                    <div id="card-action">
-                        <img src="./icons/circle-trash.svg" alt=""> Delete Button
-                    </div>
-
-            </div> -->
-
-        </div>
-
-    </main>
+    </div>
 
     <footer>
 
-        <div class="centralize">
+        <div class="center" id="footer-line">
             <div id="vineline"></div>
         </div>
 

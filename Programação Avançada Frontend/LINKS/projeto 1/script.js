@@ -52,15 +52,15 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     
     const namevalue = Inputname.value
-    const URLvalue = Inputurl.value
+    let URLvalue = Inputurl.value
     
     if(namevalue.length > 23) 
     return alert('O tamanho máximo permitido é 23 caracteres!')
     
     if(!namevalue || !URLvalue) return alert('Preencha os campos!')
     
-    if (!/^http/.test(Inputurl.value)) 
-    return alert('A URL deve começar com "http".')
+    if (!/^http/.test(URLvalue)) URLvalue = 'http://'+ URLvalue
+    // if(!/.com$/.test(URLvalue)) URLvalue = URLvalue + '.com'
     
     
     addElement( namevalue, URLvalue )
@@ -81,15 +81,10 @@ formSearch.addEventListener('submit', (event) => {
     
     const value = search.value
 
-    
     text.forEach( (text) => {
-        if(text.textContent != value){
+        if(!RegExp(value.toLowerCase()).test(text.textContent.toLowerCase())){
             text.parentNode.parentNode.setAttribute('hidden','')
         }else{
-            text.parentNode.parentNode.removeAttribute('hidden')
-        }
-        
-        if(RegExp(value.toLowerCase()).test(text.textContent.toLowerCase())){
             text.parentNode.parentNode.removeAttribute('hidden')
         }
     })
@@ -102,4 +97,16 @@ formSearch.addEventListener('submit', (event) => {
         })
     }
 
+})
+
+const bars = document.getElementById('bars')
+const close = document.querySelector('div.close')
+const nav2 = document.querySelector('div.nav2')
+
+bars.addEventListener('click', () => {
+    nav2.removeAttribute('style')
+})
+
+close.addEventListener('click', () => {
+    nav2.setAttribute('style', 'display: none;')
 })
