@@ -1,0 +1,210 @@
+body {
+    background-color: #f1faee;
+    min-height: 100vh;
+    font-family: 'Bebas Neue';
+}
+
+.centralize {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    width: 100%;
+}
+
+div#logo {
+    display: flex;
+    justify-content: center;
+}
+
+img#logosvg {
+    width: 133px;
+    height: 67px;
+}
+
+div#vineline {
+    width: 90%;
+    height: 3px;
+    background: #A34D4D;
+}
+
+div#nav {
+    width: 100%;
+}
+
+div#nav nav {
+    width: 90%;
+    height: 33px;
+    background: rgba(255, 216, 216, 0.17);
+    border-radius: 5px;
+}
+
+div#bars {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+
+div#bars img {
+    width: 20px;
+    height: 25px;
+    margin-right: 25px;
+    margin-top: 5px;
+    margin-left: 0.5em;
+}
+
+div#text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div#text p {
+    line-height: 0px;
+    text-align: justify;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    width: max-content;
+}
+
+div#account {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+div#account img {
+    width: 24px;
+    height: 21px;
+    margin-top: 5px;
+    margin-right: 0.5em;
+}
+
+input {
+    border: none;
+}
+
+form {
+    display: grid;
+    justify-content: center;
+}
+
+input#name, input#url {
+    width: 170px;
+    height: 38px;
+    background: #E6D6D6;
+    border-radius: 15px;
+    margin-top: 2em;
+    padding: 0px 4em;
+}
+
+input#name {
+    background-image: url('./icons/ABplate.svg');
+    background-position: 10px 7px;
+    background-repeat: no-repeat;
+    
+}
+
+input#url {
+    background-image: url('./icons/hastag.svg');
+    background-position: 10px 7px;
+    background-repeat: no-repeat;
+}
+
+div#button-submit {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: none;
+}
+
+button#form-submit {
+    width: 114px;
+    height: 48px;
+    background: #B9FBC0;
+    border-radius: 50px;
+    margin-top: 1em;
+}
+
+div#brownline {
+    width: 85%;
+    height: 3px;
+    background: #564444;
+    margin-top: 1.5em;
+}
+
+input#search {
+    width: 130px;
+    height: 41px;
+    border-radius: 50px;
+    background-image: url('./icons/search.svg');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    margin-top: 1em;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input#search:focus {
+    width: 300px;
+}
+
+main {
+    margin-top: auto;
+    min-height: 25vh;
+}
+
+div#cards-group {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+div#card {
+    width: 318px;
+    height: 33px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    white-space: normal;
+    margin-top: 1em;
+}
+
+div#card a:link, a:hover, a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+div#card-text {
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    margin-left: 0.2em;
+    line-height: 10px 10px;
+    text-align: left;
+    text-align: justify;
+}
+
+div#card-text a {
+    max-width: 23ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+div#card-action {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-right: 0.5em;
+}
+
+div#card-action img {
+    position: relative;
+    top: -29px;
+
+}
