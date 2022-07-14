@@ -21,78 +21,82 @@
 </head>
 <body>
     
+    <header>
+                    
+            <div id="logo">
+                <img src="./icons/logo.svg" alt="" id="logosvg"> <!--Logo-->
+            </div>
+    
+            <div class="center">
+                <div id="vineline"></div>
+            </div>
+    
+    
+                <div id="nav" class="center">
+    
+                    <nav class="center">
+        
+                        <div id="navOptions">
+                            <p>About</p>
+                            <p>Contact</p>
+                            <p>Feedback</p>
+                        </div>
+
+                        <div id="bars">
+                            <img src="./icons/bars.svg" alt=""> <!--Bars.svg-->
+                        </div>
+        
+                        <div id="navtext">
+                            <p>REPLACE YOUR WEB LINKS HERE!</p>
+                        </div>
+        
+                        <div id="account">
+                            <img src="./icons/arrow-right-to-bracket.svg" alt=""> <!--Sign In/Out-->
+                        </div>
+        
+                    </nav>
+    
+                </div>
+
+                <div id="nav" class="center nav2" style="display: none;">
+                    <nav class="center">
+        
+                        <div id="bars" class="w100">
+                            <p>About</p>
+                            <p>Contact</p>
+                            <p>Feedback</p>
+                        </div>
+
+                        <div id="account" class="close">
+                            <img src="https://site-assets.fontawesome.com/releases/v6.1.1/svgs/light/circle-xmark.svg" alt=""> <!--Sign In/Out-->
+                        </div>
+        
+                    </nav>
+                </div>        
+        
+    </header>
     <div id="desktop">
-
-        <header>
-    
-            <div id="desktop-bar">
-                
-                <div id="logo">
-                    <img src="./icons/logo.svg" alt="" id="logosvg"> <!--Logo-->
-                </div>
         
-                <div class="center">
-                    <div id="vineline"></div>
-                </div>
-        
-        
-                    <div id="nav" class="center">
-        
-                        <nav class="center">
-            
-                            <div id="bars">
-                                <img src="./icons/bars.svg" alt=""> <!--Bars.svg-->
-                            </div>
-            
-                            <div id="text">
-                                <p>REPLACE YOUR WEB LINKS HERE!</p>
-                            </div>
-            
-                            <div id="account">
-                                <img src="./icons/arrow-right-to-bracket.svg" alt=""> <!--Sign In/Out-->
-                            </div>
-            
-                        </nav>
-        
-                    </div>
-
-                    <div id="nav" class="center nav2" style="display: none;">
-                        <nav class="center">
-            
-                            <div id="bars">
-                                <p>About</p>
-                                <p>Contact</p>
-                                <p>Feedback</p>
-                            </div>
-
-                            <div id="account" class="close">
-                                <img src="https://site-assets.fontawesome.com/releases/v6.1.1/svgs/light/circle-xmark.svg" alt=""> <!--Sign In/Out-->
-                            </div>
-            
-                        </nav>
-                    </div>
-    
+        <div id="form">
+            <div id="formText">
+                <p>REPLACE YOUR WEB LINKS HERE!</p>
             </div>
-            
-            <div id="form">
-                <form action="/" id="form-input">
+            <form action="/" id="form-input">
     
-                    <input type="text" name="name" id="name" placeholder="Digite o nome do site..."
-                         maxlength="23" required>
+                <input type="text" name="name" id="name" placeholder="Digite o nome do site..."
+                     maxlength="23" required>
     
-                    <input type="text" name="url" id="url" 
-                        placeholder="Digite a URL do site..." required>
+                <input type="text" name="url" id="url" 
+                    placeholder="Digite a URL do site..." required>
     
-                    <div id="button-submit">
-                        <button type="submit" id="form-submit">
-                            <img src="./icons/arrow-submit.svg" alt=""> <!--Arrow-send-->
-                        </button>
-                    </div>
-                </form>
+                <div id="button-submit">
+                    <button type="submit" id="form-submit">
+                        <img src="./icons/arrow-submit.svg" alt=""> <!--Arrow-send-->
+                    </button>
+                </div>
+            </form>
     
-            </div>
-            
-        </header>
+        </div>
         
         <div class="center">
             <div id="brownline"></div>
@@ -129,11 +133,30 @@
     <footer>
 
         <div class="center" id="footer-line">
-            <div id="vineline"></div>
+            <div id="vineline" class="footer-line"></div>
         </div>
 
-        <div id="grid">
+        <div id="footer">
+            <p>About US</p>
+            <p>About Project</p>
 
+            <div id="socialMedias">
+                <p>Developed BY</p>
+                <div id="footer-img-socialMedias">
+                    <a href="http://github.com/Bruno-Patrick" target="_blank" rel="noopener noreferrer">
+                        <img src="./icons/social medias/github.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            
+            <div id="socialMedias">
+                <p>Social Medias</p>
+                <div id="footer-img-socialMedias" class="content-end">
+                    <img src="./icons/social medias/twitter.svg" alt="">
+                    <img src="./icons/social medias/instagram.svg" alt="">
+                    <img src="./icons/social medias/facebook.svg" alt="">
+                </div>
+            </div>
         </div>
     </footer>
 
